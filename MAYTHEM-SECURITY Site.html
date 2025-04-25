@@ -1,0 +1,674 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAYTHEM SECURITY</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000; /* Pure black background */
+            color: #eee;
+        }
+
+        header {
+            background-color: #000;
+            padding: 1rem;
+            text-align: center;
+            border-bottom: 2px solid #ff0000; /* Red border */
+        }
+
+        nav {
+            background-color: #111;
+            padding: 0.5rem;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 1rem;
+        }
+
+        nav ul li a {
+            color: #eee;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #ff0000; /* Red hover */
+            color: #fff;
+        }
+
+        .tab-content {
+            display: none;
+            padding: 2rem;
+            line-height: 1.7;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        #home {
+            background-color: #000;
+        }
+
+        #threats {
+            background-color: #000;
+        }
+
+        #prevention {
+            background-color: #000;
+        }
+
+        #about {
+            background-color: #000;
+        }
+        #vmsetup{
+           background-color: #000;
+        }
+        #linuxcommands{
+            background-color: #000;
+        }
+        #osinttools{
+            background-color: #000;
+        }
+        #ethicallabs{
+            background-color: #000;
+        }
+
+        footer {
+            background-color: #000;
+            color: #eee;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+            border-top: 2px solid #ff0000;
+        }
+
+        h1, h2 {
+            color: #ff0000; /* Red titles */
+            margin-bottom: 1rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        ul, ol {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        ul li, ol li{
+            margin-bottom: 0.5rem;
+        }
+
+        a {
+            color: #ff0000;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .important {
+            color: #ff0000;
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        pre {
+            background-color: #111;
+            color: #eee;
+            padding: 1rem;
+            overflow-x: auto;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+            font-family: monospace;
+            line-height: 1.5;
+        }
+
+        pre code {
+            font-size: 0.9rem;
+        }
+
+        /* Additions for scary visuals */
+        body {
+            background-image: url('skull-background.jpg'); /* Replace with actual URL */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            letter-spacing: 0.2rem;
+            text-shadow: 0 0 10px #ff0000;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            text-shadow: 0 0 8px #ff0000;
+        }
+
+        a {
+            font-weight: bold;
+        }
+
+        a:hover {
+            color: #fff;
+        }
+
+        .skull-icon {
+            width: 24px; /* Adjust as needed */
+            height: 24px;
+            display: inline-block;
+            margin-right: 0.5rem;
+            background-image: url('skull-icon.png'); /* Replace with actual URL */
+            background-size: cover;
+        }
+        .tab-content ul li::before {
+            content: ""; /* bullet */
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #ff0000;
+            margin-right: 10px;
+        }
+        .tab-content ol li::before{
+             content: ""; /* number bullet */
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #ff0000;
+            margin-right: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><span class="skull-icon"></span>MAYTHEM SECURITY</h1>
+            <p>Your Shield Against the Digital Dark</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#home"><span class="skull-icon"></span>Home</a></li>
+            <li><a href="#threats"><span class="skull-icon"></span>Threats</a></li>
+            <li><a href="#prevention"><span class="skull-icon"></span>Prevention</a></li>
+            <li><a href="#about"><span class="skull-icon"></span>About</a></li>
+            <li><a href="#vmsetup"><span class="skull-icon"></span>VM Setup</a></li>
+            <li><a href="#linuxcommands"><span class="skull-icon"></span>Linux Commands</a></li>
+             <li><a href="#osinttools"><span class="skull-icon"></span>OSINT Tools</a></li>
+             <li><a href="#ethicallabs"><span class="skull-icon"></span>Ethical Hacking Labs</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div id="home" class="tab-content container active">
+            <h2><span class="skull-icon"></span>Welcome to MAYTHEM SECURITY</h2>
+            <p>
+                In today's interconnected world, cybersecurity is paramount.  MAYTHEM SECURITY is dedicated to providing you with the knowledge and tools to protect yourself from the ever-evolving threats in the digital landscape. We believe that understanding the risks is the first step towards robust defense.  This site aims to explain complex security concepts in an accessible way.
+            </p>
+            <p>
+                We cover a range of topics, from common attack vectors to the latest prevention techniques.  Whether you're a seasoned IT professional or a casual internet user, you'll find valuable information here.  Our goal is to empower you to navigate the digital world safely and confidently.
+            </p>
+             <p>
+                This site uses a red and black theme to reflect the serious nature of cybersecurity.
+            </p>
+
+        </div>
+
+        <div id="threats" class="tab-content container">
+            <h2><span class="skull-icon"></span>Understanding the Threats</h2>
+            <p>
+                The digital world is rife with threats, and understanding them is crucial for effective defense. Here are some of the most common types of cyber threats:
+            </p>
+            <ul>
+                <li><strong>Malware:</strong> Malicious software designed to harm or exploit computer systems.  This includes viruses, worms, ransomware, and spyware.  Ransomware, in particular, is a growing threat, encrypting your data and demanding payment for its release.</li>
+                <li><strong>Phishing:</strong>  Deceptive attempts to obtain sensitive information, such as usernames, passwords, and credit card details, by disguising as a trustworthy entity in electronic communication.</li>
+                <li><strong>Denial-of-Service (DoS) Attacks:</strong>  Attacks that flood a system with traffic, making it unavailable to legitimate users.  Distributed Denial-of-Service (DDoS) attacks involve multiple compromised systems attacking a single target.</li>
+                <li><strong>SQL Injection:</strong>  A code injection technique used to attack data-driven applications, in which malicious SQL statements are inserted into an entry field for execution (e.g., to dump the database contents to the attacker).</li>
+                <li><strong>Cross-Site Scripting (XSS):</strong> A type of computer security vulnerability typically found in web applications. XSS enables attackers to inject client-side scripts into web pages viewed by other users.</li>
+                <li><strong>Man-in-the-Middle (MitM) Attacks:</strong> Attacks where an attacker secretly relays and possibly alters the communication between two parties who believe they are directly communicating with each other.</li>
+                <li><strong>Zero-Day Exploits:</strong> Attacks that exploit a previously unknown vulnerability in a computer application or operating system.  These are particularly dangerous because developers have had no time to patch the vulnerability.</li>
+            </ul>
+            <p>
+                It's important to stay informed about these threats and how they work to protect yourself effectively.
+            </p>
+             <h2><span class="skull-icon"></span>Real-World Examples</h2>
+             <ul>
+                <li><strong>The Equifax Data Breach (2017):</strong> A massive data breach that exposed the personal information of over 147 million people.</li>
+                <li><strong>The WannaCry Ransomware Attack (2017):</strong> A global cyberattack that affected hundreds of thousands of computers across numerous countries.</li>
+                <li><strong>The SolarWinds Supply Chain Attack (2020):</strong> A sophisticated attack that compromised numerous U.S. government agencies and private companies.</li>
+             </ul>
+
+        </div>
+
+        <div id="prevention" class="tab-content container">
+            <h2><span class="skull-icon"></span>Prevention and Best Practices</h2>
+            <p>
+                While the threats are real, there are many steps you can take to protect yourself. Here are some essential cybersecurity best practices:
+            </p>
+            <ol>
+                <li><strong>Use Strong, Unique Passwords:</strong>  Avoid using the same password for multiple accounts.  Use a combination of uppercase and lowercase letters, numbers, and symbols.  Consider using a password manager.</li>
+                <li><strong>Enable Two-Factor Authentication (2FA):</strong>  Add an extra layer of security by requiring a second form of verification, such as a code sent to your phone or email.</li>
+                <li><strong>Keep Software Up to Date:</strong>  Regularly update your operating system, web browser, and applications to patch security vulnerabilities.</li>
+                <li><strong>Be Wary of Phishing Attempts:</strong>  Be cautious of unsolicited emails, messages, or calls that ask for personal information.  Do not click on suspicious links or download attachments from unknown sources.</li>
+                <li><strong>Install and Maintain Antivirus Software:</strong>  Use a reputable antivirus program and keep it up to date.</li>
+                 <li><strong>Use a Firewall:</strong> A firewall acts as a barrier between your computer and the internet, blocking unauthorized access.</li>
+                <li><strong>Back Up Your Data Regularly:</strong>  In case of a ransomware attack or hardware failure, regular backups ensure you can restore your data.  Store backups offline or in a secure cloud location.</li>
+                <li><strong>Practice Safe Browsing Habits:</strong>  Avoid visiting suspicious websites or downloading files from untrusted sources.</li>
+                <li><strong>Educate Yourself:</strong> Stay informed about the latest cybersecurity threats and best practices.</li>
+                <li><strong>Secure Your Network:</strong> Use a strong password for your Wi-Fi network and consider disabling SSID broadcasting.</li>
+            </ol>
+            <p>
+                By following these best practices, you can significantly reduce your risk of falling victim to cyberattacks.
+            </p>
+        </div>
+
+        <div id="about" class="tab-content container">
+            <h2><span class="skull-icon"></span>About MAYTHEM SECURITY</h2>
+            <p>
+                MAYTHEM SECURITY is a fictional organization created to raise awareness about the importance of cybersecurity.  In a world increasingly reliant on digital technology, the need for robust security measures has never been greater.  We are committed to providing accessible and informative resources to help individuals and organizations protect themselves from cyber threats.
+            </p>
+            <p>
+               Our team comprises of passionate cybersecurity experts dedicated to making the digital world a safer place. We believe that knowledge is power, and by empowering individuals with the right information, we can collectively build a stronger defense against cyberattacks.
+            </p>
+            <p>
+                While this website is a starting point, cybersecurity is an ongoing process.  Stay vigilant, stay informed, and stay secure.
+            </p>
+        </div>
+
+        <div id="vmsetup" class="tab-content container">
+            <h2><span class="skull-icon"></span>Setting Up a Virtual Machine for Cybersecurity</h2>
+            <p>
+                A virtual machine (VM) is a software-based emulation of a physical computer.  It allows you to run an operating system within another operating system.  VMs are invaluable tools in cybersecurity for several reasons:
+            </p>
+            <ul>
+                <li><strong>Safe Testing Environment:</strong>  You can test potentially malicious software or explore vulnerabilities in a controlled environment without risking your main system.</li>
+                <li><strong>Isolation:</strong>  VMs provide isolation, preventing any issues within the VM from affecting the host system.</li>
+                <li><strong>Flexibility:</strong>  You can easily create, configure, and dispose of VMs as needed.</li>
+                <li><strong>Running Different OS:</strong>  You can run different operating systems (like Linux) on your Windows machine.</li>
+            </ul>
+
+            <h3><span class="skull-icon"></span>Popular Virtualization Software</h3>
+            <ul>
+                <li><strong>VirtualBox:</strong>  A free and open-source virtualization application developed by Oracle.  It's user-friendly and suitable for most personal and educational use cases.</li>
+                <li><strong>VMware Workstation Player:</strong>  A commercial virtualization software (with a free version for personal use) that offers more advanced features and better performance than VirtualBox.</li>
+                <li><strong>Hyper-V:</strong>  Microsoft's virtualization platform, built into Windows Pro and Enterprise editions.</li>
+            </ul>
+
+            <h3><span class="skull-icon"></span>Steps to Set Up a VM (Using VirtualBox as an Example)</h3>
+            <ol>
+                <li><strong>Download and Install VirtualBox:</strong>  Download the latest version of VirtualBox from the official Oracle website and follow the installation instructions.</li>
+                <li><strong>Download an OS Image (.iso):</strong>  Download the ISO file for the operating system you want to install in the VM.  For cybersecurity testing, Linux distributions like Ubuntu, Kali Linux, or Parrot OS are popular choices.</li>
+                <li><strong>Create a New Virtual Machine:</strong>
+                    <ul>
+                        <li>Open VirtualBox and click on the "New" button.</li>
+                        <li>Give your VM a name (e.g., "Kali Linux").</li>
+                        <li>Select the operating system type and version (e.g., "Linux" and "Ubuntu 64-bit").</li>
+                        <li>Allocate memory (RAM) to the VM.  A minimum of 2GB is recommended for most Linux distributions.</li>
+                        <li>Create a virtual hard disk.  Choose the "Create a virtual hard disk now" option and follow the prompts.  The default settings are usually fine for initial setup.</li>
+                    </ul>
+                </li>
+                <li><strong>Configure the VM Settings:</strong>
+                    <ul>
+                         <li>Select the newly created VM and click on "Settings."</li>
+                         <li>Go to "Storage" and click on the empty CD/DVD icon.</li>
+                         <li>Click on the CD/DVD icon on the right and choose "Choose a disk file."</li>
+                         <li>Select the .iso file you downloaded in step 2.</li>
+                         <li>(Optional) Go to "Network" and select "Bridged Adapter" if you want the VM to have its own IP address on your network.</li>
+                    </ul>
+                </li>
+                <li><strong>Start the VM and Install the OS:</strong>
+                    <ul>
+                        <li>Select the VM and click on "Start."</li>
+                        <li>The VM will boot from the .iso file.  Follow the on-screen instructions to install the operating system.  This process is similar to installing an OS on a physical computer.</li>
+                        <li>Once the OS is installed, you can shut down the VM.</li>
+                    </ul>
+                </li>
+                <li><strong>Install Guest Additions (Recommended):</strong>
+                     <ul>
+                         <li>Start the VM.</li>
+                         <li>In the VM's menu, go to "Devices" -> "Insert Guest Additions CD Image."</li>
+                         <li>Follow the instructions within the VM to install the Guest Additions. This will improve performance, enable shared folders, and allow for better screen resolution.</li>
+                     </ul>
+                </li>
+            </ol>
+            <p>
+                Your VM is now set up and ready to use.  You can start it, shut it down, and create snapshots (to save its state) as needed.
+            </p>
+        </div>
+
+        <div id="linuxcommands" class="tab-content container">
+            <h2><span class="skull-icon"></span>100 Essential Linux Commands for Cybersecurity</h2>
+             <p>
+                Linux is a powerful and versatile operating system widely used in cybersecurity.  Familiarity with its command-line interface is essential for any security professional. Here's a list of 100 essential Linux commands, categorized for easier learning:
+            </p>
+
+            <h3><span class="skull-icon"></span>Basic File and Directory Management</h3>
+            <pre><code>
+    pwd             # Print working directory
+    ls              # List files and directories
+    cd              # Change directory
+    mkdir           # Create directory
+    rmdir           # Remove empty directory
+    rm              # Remove files or directories
+    cp              # Copy files or directories
+    mv              # Move files or directories
+    touch           # Create an empty file
+    cat             # Concatenate and display file content
+    more            # Display file content page by page
+    less            # Display file content page by page (more advanced)
+    head            # Display the beginning of a file
+    tail            # Display the end of a file
+    nano            # Simple text editor
+    vi/vim           # Powerful text editor
+    file            # Determine file type
+    chmod           # Change file permissions
+    chown           # Change file owner
+    chgrp           # Change file group
+    ln              # Create hard or symbolic links
+    find            # Find files and directories
+    grep            # Search for patterns in files
+    wc              # Count words, lines, and characters
+    du              # Estimate file space usage
+    df              # Report file system disk space usage
+    tar             # Archive files
+    gzip            # Compress files
+    gunzip          # Decompress files
+    zip             # Package and compress files
+    unzip           # Extract files from a zip archive
+            </code></pre>
+
+            <h3><span class="skull-icon"></span>System Information and Monitoring</h3>
+             <pre><code>
+    uname           # Print system information
+    uptime          # Show system uptime
+    hostname        # Print or set system hostname
+    whoami          # Print current user name
+    who             # Show who is logged on
+    w               # Show who is logged on and what they are doing
+    last            # Show last logged in users
+    history         # Display command history
+    ps              # Display running processes
+    top             # Display and update sorted processes
+    htop            # Interactive process viewer (requires installation)
+    kill            # Terminate a process
+    killall         # Kill processes by name
+    pkill           # Kill processes by pattern
+    bg              # Put a process in the background
+    fg              # Bring a process to the foreground
+    jobs            # List active jobs
+    free            # Display memory usage
+    vmstat          # Report virtual memory statistics
+    iostat          # Report CPU and I/O statistics
+    mpstat          # Report processor related statistics
+    netstat         # Display network connections
+    ss              # Another utility to investigate sockets (more modern netstat)
+    lsof            # List open files
+    dmesg           # Display kernel messages
+    lspci           # List PCI devices
+    lsusb           # List USB devices
+    lsblk           # List block devices
+    mount           # Mount a file system
+    umount          # Unmount a file system
+    swapon          # Enable swap space
+    swapoff         # Disable swap space
+    shutdown        # Shut down the system
+    reboot          # Reboot the system
+    poweroff        # Power off the system
+            </code></pre>
+
+            <h3><span class="skull-icon"></span>Networking</h3>
+            <pre><code>
+    ifconfig        # Configure network interfaces (deprecated, use ip)
+    ip              # Show / manipulate routing, devices, policy routing and tunnels
+    route           # Show / manipulate the IP routing table (deprecated, use ip route)
+    netstat         # Display network connections, routing tables, interface statistics, masquerade connections, and multicast memberships
+    ss              # Investigate sockets
+    ping            # Send ICMP ECHO_REQUEST to network hosts
+    traceroute      # Trace route to host
+    mtr             # Network diagnostic tool
+    host            # DNS lookup utility
+    dig             # DNS lookup utility (more advanced)
+    nslookup        # Query Internet name servers
+    whois           # Query WHOIS database
+    curl            # Transfer data from or to a server
+    wget            # Retrieve files from the web
+    ssh             # Secure Shell client
+    scp             # Secure copy (file transfer)
+    sftp            # Secure FTP (file transfer)
+    nmap            # Network scanner
+    tcpdump         # Network packet analyzer
+    tshark          # Network protocol analyzer
+    iptables        # Linux firewall utility
+    ufw             # Uncomplicated Firewall (user-friendly iptables frontend)
+    route           # Display or manipulate the IP routing table
+            </code></pre>
+
+            <h3><span class="skull-icon"></span>User and System Management</h3>
+            <pre><code>
+    useradd         # Create a new user
+    userdel         # Delete a user
+    usermod         # Modify a user account
+    passwd          # Change a user's password
+    groupadd        # Create a new group
+    groupdel        # Delete a group
+    groupmod        # Modify a group
+    su              # Switch user
+    sudo            # Execute a command as another user (usually root)
+    visudo          # Edit the sudoers file
+    chage           # Change user password expiry information
+    id              # Print user and group ID's
+    last            # Show last logins
+    ac              # Display connect time accounting
+    /etc/passwd     # User account information file
+    /etc/shadow     # Secure user account information
+    /etc/group      # Group account information file
+            </code></pre>
+
+            <h3><span class="skull-icon"></span>Processes</h3>
+            <pre><code>
+    ps aux          # Show all processes
+    top             # Display dynamic real-time view of running processes
+    htop            # Interactive process viewer
+    kill            # Send a signal to a process
+    killall         # Kill processes by name
+    pkill           # Kill processes based on name and other attributes
+    nice            # Run a process with modified scheduling priority
+    renice          # Alter the priority of running processes
+    bg              # Send a process to the background
+    fg              # Bring a process to the foreground
+    jobs            # Display status of jobs in the current session
+    nohup           # Run a command immune to hangups, with output to a non-tty
+    screen          # Full-screen window manager
+    tmux            # Terminal multiplexer
+            </code></pre>
+        </div>
+
+        <div id="osinttools" class="tab-content container">
+            <h2><span class="skull-icon"></span>Open Source Intelligence (OSINT) Tools</h2>
+            <p>
+                Open Source Intelligence (OSINT) is the practice of collecting and analyzing information from publicly available sources.  It's a crucial skill in cybersecurity for tasks such as threat intelligence, vulnerability research, and social engineering defense. Here are some commonly used OSINT tools:
+            </p>
+
+            <h3><span class="skull-icon"></span>Search Engines and Aggregators</h3>
+            <ul>
+                <li><strong>Google Dorking:</strong>  Using advanced search operators to find specific information on Google (e.g.,  `site:example.com filetype:pdf "sensitive data"`).</li>
+                <li><strong>Shodan:</strong>  A search engine for Internet-connected devices, useful for identifying potential vulnerabilities.</li>
+                <li><strong>Censys:</strong>  Similar to Shodan, providing data on devices reachable over the Internet.</li>
+                <li><strong>theHarvester:</strong>  A tool to gather email accounts, subdomains, and hostnames from various public sources.</li>
+            </ul>
+
+            <h3><span class="skull-icon"></span>Social Media Intelligence</h3>
+            <ul>
+                <li><strong>Social Searcher:</strong> A tool to search for mentions across multiple social networks.</li>
+                 <li><strong> মাল্টিগো (Maltego):</strong> A proprietary software used for open-source intelligence (OSINT) and graphical link analysis.</li>
+            </ul>
+
+            <h3><span class="skull-icon"></span>Website and Domain Information</h3>
+            <ul>
+                <li><strong>Whois:</strong>  A protocol for querying databases that store the registered users or assignees of an Internet resource, such as a domain name, IP address.</li>
+                <li><strong>DNS Tools (nslookup, dig, host):</strong>  Used to gather information about domain name system records.</li>
+                <li><strong>Wayback Machine:</strong>  An internet archive that allows you to see historical versions of websites.</li>
+                <li><strong>BuiltWith:</strong>  A tool to find out what technologies a website is built with.</li>
+            </ul>
+
+            <h3><span class="skull-icon"></span>Network Information</h3>
+            <ul>
+                <li><strong>Nmap:</strong>  A powerful network scanner used for host discovery, port scanning, and OS fingerprinting.</li>
+                <li><strong>Traceroute/MTR:</strong>  Tools for tracing the route that packets take to reach a destination.</li>
+            </ul>
+
+            <h3><span class="skull-icon"></span>OSINT Frameworks</h3>
+            <ul>
+                <li><strong>OSINT Framework:</strong>  A website that organizes a vast collection of OSINT tools and resources by category.</li>
+            </ul>
+             <h3><span class="skull-icon"></span>Code Repositories</h3>
+            <ul>
+                <li><strong>GitHub:</strong> Can be used to find information, look for credentials, and more.</li>
+            </ul>
+
+            <p>
+                This is just a small sample of the many OSINT tools available.  The best tools for a particular task will depend on the specific information you are trying to find.  It's important to use these tools ethically and legally.
+            </p>
+        </div>
+
+        <div id="ethicallabs" class="tab-content container">
+            <h2><span class="skull-icon"></span>Setting Up Your Ethical Hacking Labs</h2>
+            <p>
+                To practice ethical hacking skills, you need a safe and controlled environment. Setting up your own virtual labs is the best way to achieve this. Here's a guide to get you started:
+            </p>
+
+            <h3><span class="skull-icon"></span>1. Choose a Virtualization Platform</h3>
+            <p>
+                As discussed in the <a href="#vmsetup">VM Setup</a> section, you'll need virtualization software.  Popular choices include:
+            </p>
+            <ul>
+                <li><strong>VirtualBox (Free and Open Source)</strong></li>
+                <li><strong>VMware Workstation Player (Free for personal use)</strong></li>
+                <li><strong>Hyper-V (Built into Windows Pro/Enterprise)</strong></li>
+            </ul>
+
+            <h3><span class="skull-icon"></span>2. Select Target Operating Systems</h3>
+            <p>
+               You'll need to install operating systems within your VMs that you can practice your hacking skills on.  Some good choices include:
+            </p>
+            <ul>
+                <li><strong>Metasploitable 2:</strong> A deliberately vulnerable Linux distribution designed for security training.</li>
+                <li><strong>Ubuntu Server:</strong> A common Linux server OS that you can harden or try to exploit.</li>
+                <li><strong>Windows Server:</strong>  For practicing attacking Windows systems.</li>
+                <li><strong>Damn Vulnerable Web Application (DVWA):</strong> A PHP/MySQL web application that is intentionally vulnerable.</li>
+            </ul>
+
+            <h3><span class="skull-icon"></span>3. Network Configuration</h3>
+            <p>
+                Configure your virtual network carefully:
+            </p>
+             <ul>
+                <li><strong>Isolated Network:</strong>  The safest option is to create an internal network within your virtualization software.  This prevents your lab VMs from interacting with your host machine or the internet, ensuring that your activities don't affect anything outside the lab.</li>
+                <li><strong>Host-Only Network:</strong> This allows your host machine to communicate with the VMs, but the VMs cannot communicate with the outside network.</li>
+                <li><strong>Bridged Networking (Use with Caution):</strong> This gives your VMs their own IP addresses on your local network.  This is more complex and can pose a security risk if not configured correctly.  If you use bridged networking, ensure that your VMs are isolated from your main network as much as possible.</li>
+             </ul>
+
+            <h3><span class="skull-icon"></span>4. Recommended Tools</h3>
+            <p>
+                Install tools within your attacker VM (e.g., Kali Linux) that you willuse for your ethical hacking practice:
+            </p>
+            <ul>
+                <li><strong>Nmap:</strong>  For network scanning and host discovery.</li>
+                <li><strong>Metasploit Framework:</strong>  A powerful tool for developing and executing exploits.</li>
+                <li><strong>Burp Suite:</strong>  A proxy tool for web application security testing.</li>
+                <li><strong>Wireshark:</strong>  A network protocol analyzer.</li>
+                <li><strong>John the Ripper:</strong>  A password cracking tool.</li>
+            </ul>
+
+            <h3><span class="skull-icon"></span>5. Practice Scenarios</h3>
+            <p>
+                Here are some ideas for practice scenarios:
+            </p>
+            <ul>
+                <li><strong>Vulnerability Scanning:</strong> Use Nmap to scan your target VMs for open ports and vulnerabilities.</li>
+                <li><strong>Exploitation:</strong>  Use Metasploit to exploit known vulnerabilities on Metasploitable 2.</li>
+                <li><strong>Web Application Attacks:</strong>  Use Burp Suite to test DVWA for vulnerabilities like SQL injection and cross-site scripting.</li>
+                <li><strong>Password Cracking:</strong>  Use John the Ripper to crack passwords on your target systems.</li>
+                <li><strong>Network Sniffing:</strong> Use Wireshark to capture and analyze network traffic.</li>
+            </ul>
+
+            <h3><span class="skull-icon"></span>6. Important Considerations</h3>
+            <ul>
+                <li><strong>Legal and Ethical:</strong>  Only perform these activities on systems that you have explicit permission to test.  Unauthorized hacking is illegal and unethical.</li>
+                <li><strong>Isolation:</strong>  Keep your lab environment completely isolated from your production network to avoid accidental damage or legal issues.</li>
+                <li><strong>Documentation:</strong>  Keep detailed notes of your activities, including the tools you used, the vulnerabilities you found, and the steps you took.  This will help you learn and improve your skills.</li>
+                 <li><strong>Regularly Update:</strong> Keep your VMs and tools updated to the latest versions.</li>
+            </ul>
+
+            <p>
+                By following these steps, you can create a safe and effective environment for practicing your ethical hacking skills and improving your cybersecurity expertise.
+            </p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 MAYTHEM SECURITY. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navLinks = document.querySelectorAll('nav ul li a');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            function activateTab(tabId) {
+                tabContents.forEach(tab => tab.classList.remove('active'));
+                document.getElementById(tabId).classList.add('active');
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${tabId}`) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    const tabId = link.getAttribute('href').substring(1);
+                    activateTab(tabId);
+                });
+            });
+
+             // Activate the Home tab by default
+             activateTab('home');
+        });
+    </script>
+</body>
+</html>
